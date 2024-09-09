@@ -1,14 +1,14 @@
 # Alzus Apps Website
 
 <p align="center">
-    <img src="public/logo.webp" alt="Alzus Apps Logo" width="150"/>
+    <img src="public/rounded-logo.webp" alt="Alzus Apps Logo" width="150"/>
 </p>
 
 ## Introduction
 
 Welcome to Alzus Apps! 🚀
 
-Discover innovative mobile apps that focus on user experience, performance, and constant improvement. Designed and built with passion by Alzus Apps.
+Discover innovative mobile apps that focus on user experience, performance, and constant improvement.
 
 ## License
 
