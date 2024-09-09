@@ -4,6 +4,12 @@ import React, { useEffect } from "react";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
 import { User, Zap, RefreshCw } from "lucide-react";
+import Image from 'next/image';
+
+interface IconCardProps {
+  iconSrc: string;
+  alt: string;
+}
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -30,6 +36,16 @@ export default function Home() {
 
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-900 flex flex-col items-center justify-center overflow-hidden font-['Space_Mono'] p-4">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="rounded-full shadow-lg bg-purple-900/50 p-4 mb-8 border border-purple-500 backdrop-blur-lg relative z-20"
+        style={{ width: "150px", height: "150px", display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <IconCard iconSrc="/logo.webp" alt="Alzus Apps Icon" />
+      </motion.div>
+
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -83,6 +99,18 @@ export default function Home() {
         />
       </div>
     </main>
+  );
+}
+
+function IconCard({ iconSrc, alt }: IconCardProps) {
+  return (
+    <Image
+      src={iconSrc}
+      alt={alt}
+      width={150}
+      height={150}
+      className="rounded-full object-cover"
+    />
   );
 }
 
