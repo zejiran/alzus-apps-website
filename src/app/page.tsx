@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-900 flex flex-col items-center justify-center overflow-hidden font-['Space_Mono']">
+    <main className="min-h-screen w-full bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-900 flex flex-col items-center justify-center overflow-hidden font-['Space_Mono'] p-4">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export default function Home() {
           speed={1}
         />
       </div>
-    </div>
+    </main>
   );
 }
 
