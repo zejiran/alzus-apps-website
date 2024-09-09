@@ -3,9 +3,9 @@
 import React, { useEffect } from "react";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
-import { Code, Smartphone, Rocket } from "lucide-react";
+import { User, Zap, RefreshCw } from "lucide-react";
 
-interface SkillCardProps {
+interface FeatureCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
@@ -45,7 +45,7 @@ export default function Home() {
         transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
         className="text-xl md:text-2xl text-purple-200 mb-8 relative z-20 text-center"
       >
-        Crafting Innovative Mobile Solutions
+        Innovative, Reliable, Built by Experts.
       </motion.h2>
 
       <motion.div
@@ -54,9 +54,9 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="flex flex-wrap justify-center gap-8 mb-8 relative z-20"
       >
-        <SkillCard icon={<Smartphone size={32} />} title="Mobile-First" description="Specialized in Flutter and React Native" />
-        <SkillCard icon={<Code size={32} />} title="Clean Architecture" description="Scalable and maintainable code" />
-        <SkillCard icon={<Rocket size={32} />} title="Rapid Prototyping" description="From concept to MVP in record time" />
+        <FeatureCard icon={<User size={32} />} title="User-Centric" description="Apps designed for you." />
+        <FeatureCard icon={<Zap size={32} />} title="Performance" description="Fast and reliable." />
+        <FeatureCard icon={<RefreshCw size={32} />} title="Constant Updates" description="Always improving." />
       </motion.div>
 
       <motion.div
@@ -65,9 +65,9 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 1 }}
         className="flex space-x-4 relative z-20"
       >
-        <SocialLink href="https://github.com/alzus-apps" icon="github" />
-        <SocialLink href="https://www.linkedin.com/company/alzus-apps" icon="linkedin" />
-        <SocialLink href="https://t.me/alzusapps" icon="telegram" />
+        <SocialLink href="https://github.com/zejiran" icon="github" />
+        <SocialLink href="https://www.linkedin.com/in/juanszalegria/" icon="linkedin" />
+        <SocialLink href="https://t.me/juanszalegria" icon="telegram" />
       </motion.div>
 
       <div className="absolute inset-0 w-full h-full">
@@ -86,7 +86,7 @@ export default function Home() {
   );
 }
 
-function SkillCard({ icon, title, description }: SkillCardProps) {
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
