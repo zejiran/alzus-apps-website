@@ -17,9 +17,19 @@ interface FeatureCardProps {
   description: string;
 }
 
+const SOCIAL_ICON_PATHS = {
+  telegram: "M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z",
+  github:
+    "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22",
+  googleplay: "M5 3l14 9-14 9V3z",
+  email: "M2 5h20v14H2z M2 5l10 8 10-8",
+} as const;
+
+type SocialIcon = keyof typeof SOCIAL_ICON_PATHS;
+
 interface SocialLinkProps {
   href: string;
-  icon: "github" | "linkedin" | "telegram";
+  icon: SocialIcon;
 }
 
 export default function Home() {
@@ -103,9 +113,10 @@ export default function Home() {
         <SocialLink href="https://t.me/juanszalegria" icon="telegram" />
         <SocialLink href="https://github.com/zejiran" icon="github" />
         <SocialLink
-          href="https://www.linkedin.com/in/juanszalegria/"
-          icon="linkedin"
+          href="https://play.google.com/store/apps/dev?id=6019444648349159980"
+          icon="googleplay"
         />
+        <SocialLink href="mailto:juanszalegria@gmail.com" icon="email" />
       </motion.div>
 
       <div className="absolute inset-0 w-full h-full">
@@ -150,13 +161,6 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
 }
 
 function SocialLink({ href, icon }: SocialLinkProps) {
-  const iconPath =
-    icon === "github"
-      ? "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-      : icon === "linkedin"
-        ? "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z M2 9h4v12H2z M4 2a2 2 0 1 1-2 2 2 2 0 0 1 2-2"
-        : "M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z";
-
   return (
     <a
       href={href}
@@ -175,7 +179,7 @@ function SocialLink({ href, icon }: SocialLinkProps) {
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d={iconPath}></path>
+        <path d={SOCIAL_ICON_PATHS[icon]}></path>
       </svg>
     </a>
   );
