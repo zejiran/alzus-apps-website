@@ -9,10 +9,37 @@ const spaceMono = Space_Mono({
   variable: "--font-space-mono",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000");
+
+const title = "Alzus Apps | Crafted with Passion, Built for Performance";
+const description =
+  "At Alzus Apps, we build creative, user-centric mobile apps that blend cutting-edge technology with seamless performance. Every app is meticulously crafted to deliver innovation and simplicity, keeping users at the core of the experience.";
+
 export const metadata: Metadata = {
-  title: "Alzus Apps | Crafted with Passion, Built for Performance",
-  description:
-    "At Alzus Apps, we build creative, user-centric mobile apps that blend cutting-edge technology with seamless performance. Every app is meticulously crafted to deliver innovation and simplicity, keeping users at the core of the experience.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s | Alzus Apps",
+  },
+  description,
+  keywords: ["Alzus Apps", "mobile apps", "games", "Android", "app developer"],
+  openGraph: {
+    title,
+    description,
+    siteName: "Alzus Apps",
+    type: "website",
+    images: ["/rounded-logo.webp"],
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+    images: ["/rounded-logo.webp"],
+  },
 };
 
 export default function RootLayout({
