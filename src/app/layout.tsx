@@ -12,7 +12,7 @@ const spaceMono = Space_Mono({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   process.env.CF_PAGES_URL ??
-  "http://localhost:3000";
+  "https://alzusapps.pages.dev";
 
 const title = "Alzus Apps | Crafted with Passion, Built for Performance";
 const description =
