@@ -24,6 +24,8 @@ const SOCIAL_ICON_PATHS = {
     "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22",
   googleplay: "M5 3l14 9-14 9V3z",
   email: "M2 5h20v14H2z M2 5l10 8 10-8",
+  coffee:
+    "M18 8h1a4 4 0 0 1 0 8h-1 M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z M6 1v3 M10 1v3 M14 1v3",
 } as const;
 
 const SOCIAL_ICON_LABELS = {
@@ -31,6 +33,7 @@ const SOCIAL_ICON_LABELS = {
   github: "GitHub",
   googleplay: "Google Play",
   email: "Email",
+  coffee: "Buy Me a Coffee",
 } as const;
 
 type SocialIcon = keyof typeof SOCIAL_ICON_PATHS;
@@ -113,6 +116,10 @@ export default function Home() {
           icon="googleplay"
         />
         <SocialLink href="mailto:juanszalegria@gmail.com" icon="email" />
+        <SocialLink
+          href="https://buymeacoffee.com/juanszalegria"
+          icon="coffee"
+        />
       </motion.div>
 
       <motion.div
