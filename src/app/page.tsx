@@ -26,6 +26,13 @@ const SOCIAL_ICON_PATHS = {
   email: "M2 5h20v14H2z M2 5l10 8 10-8",
 } as const;
 
+const SOCIAL_ICON_LABELS = {
+  telegram: "Telegram",
+  github: "GitHub",
+  googleplay: "Google Play",
+  email: "Email",
+} as const;
+
 type SocialIcon = keyof typeof SOCIAL_ICON_PATHS;
 
 interface SocialLinkProps {
@@ -169,6 +176,7 @@ function SocialLink({ href, icon }: SocialLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={SOCIAL_ICON_LABELS[icon]}
       className="text-purple-300 hover:text-purple-100 transition-colors"
     >
       <svg
@@ -181,6 +189,8 @@ function SocialLink({ href, icon }: SocialLinkProps) {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        aria-hidden="true"
+        focusable="false"
       >
         <path d={SOCIAL_ICON_PATHS[icon]}></path>
       </svg>
