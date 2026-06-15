@@ -11,9 +11,8 @@ const spaceMono = Space_Mono({
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000");
+  process.env.CF_PAGES_URL ??
+  "http://localhost:3000";
 
 const title = "Alzus Apps | Crafted with Passion, Built for Performance";
 const description =
