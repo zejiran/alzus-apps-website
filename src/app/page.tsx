@@ -109,17 +109,17 @@ export default function Home() {
         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         className="flex space-x-4 relative z-20"
       >
-        <SocialLink href="https://t.me/juanszalegria" icon="telegram" />
-        <SocialLink href="https://github.com/zejiran" icon="github" />
+        <SocialLink href="mailto:juanszalegria@gmail.com" icon="email" />
         <SocialLink
           href="https://play.google.com/store/apps/dev?id=6019444648349159980"
           icon="googleplay"
         />
-        <SocialLink href="mailto:juanszalegria@gmail.com" icon="email" />
         <SocialLink
           href="https://buymeacoffee.com/juanszalegria"
           icon="coffee"
         />
+        <SocialLink href="https://t.me/juanszalegria" icon="telegram" />
+        <SocialLink href="https://github.com/zejiran" icon="github" />
       </motion.div>
 
       <motion.div
