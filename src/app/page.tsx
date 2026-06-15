@@ -100,12 +100,12 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 1 }}
         className="flex space-x-4 relative z-20"
       >
+        <SocialLink href="https://t.me/juanszalegria" icon="telegram" />
         <SocialLink href="https://github.com/zejiran" icon="github" />
         <SocialLink
           href="https://www.linkedin.com/in/juanszalegria/"
           icon="linkedin"
         />
-        <SocialLink href="https://t.me/juanszalegria" icon="telegram" />
       </motion.div>
 
       <div className="absolute inset-0 w-full h-full">
