@@ -44,9 +44,9 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-900 flex flex-col items-center justify-center overflow-hidden font-mono px-4 py-28">
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         className="rounded-full shadow-lg bg-purple-900/50 p-4 mb-8 border border-purple-500 backdrop-blur-lg relative z-20"
         style={{
           width: "150px",
@@ -60,27 +60,27 @@ export default function Home() {
       </motion.div>
 
       <motion.h1
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="text-5xl md:text-7xl font-bold text-purple-100 mb-4 relative z-20 text-center"
+        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+        className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-100 via-purple-200 to-purple-400 bg-clip-text text-transparent mb-4 relative z-20 text-center"
       >
         Alzus Apps
       </motion.h1>
 
       <motion.h2
-        initial={{ opacity: 0, y: -30 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         className="text-xl md:text-2xl text-purple-200 mb-8 relative z-20 text-center"
       >
         Innovative, Reliable, Built by Experts.
       </motion.h2>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
         className="flex flex-wrap justify-center gap-8 mb-8 relative z-20"
       >
         <FeatureCard
@@ -101,9 +101,9 @@ export default function Home() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         className="flex space-x-4 relative z-20"
       >
         <SocialLink href="https://t.me/juanszalegria" icon="telegram" />
@@ -116,9 +116,9 @@ export default function Home() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.3 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
         className="mt-8 relative z-20"
       >
         <Link
@@ -135,7 +135,7 @@ export default function Home() {
           background="transparent"
           minSize={0.6}
           maxSize={1.4}
-          particleDensity={100}
+          particleDensity={50}
           className="w-full h-full"
           particleColor="#D8B4FE"
           speed={1}
