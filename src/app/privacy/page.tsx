@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Alzus Apps",
@@ -14,10 +15,25 @@ interface PolicySectionProps {
 
 export default function PrivacyPolicy() {
   return (
-    <main className="min-h-screen w-full bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-900 flex justify-center px-4 py-20">
-      <article className="flex w-full max-w-2xl flex-col gap-8 text-purple-100">
+    <main className="min-h-screen w-full bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-900 flex justify-center overflow-hidden font-mono px-4 py-20">
+      <div className="fixed inset-0 w-full h-full">
+        <SparklesCore
+          id="tsparticles-privacy"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={50}
+          className="w-full h-full"
+          particleColor="#D8B4FE"
+          speed={1}
+        />
+      </div>
+
+      <article className="flex w-full max-w-2xl flex-col gap-8 text-purple-100 relative z-20">
         <header className="flex flex-col gap-2">
-          <h1 className="text-4xl font-bold">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-100 via-purple-200 to-purple-400 bg-clip-text text-transparent">
+            Privacy Policy
+          </h1>
           <p className="text-purple-300 text-sm">
             Effective date: January 1, 2025
           </p>
