@@ -5,6 +5,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { motion } from "framer-motion";
 import { User, Zap, RefreshCw } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface IconCardProps {
   iconSrc: string;
@@ -117,6 +118,20 @@ export default function Home() {
           icon="googleplay"
         />
         <SocialLink href="mailto:juanszalegria@gmail.com" icon="email" />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1.3 }}
+        className="mt-8 relative z-20"
+      >
+        <Link
+          href="/privacy"
+          className="text-purple-400 hover:text-purple-200 transition-colors text-sm"
+        >
+          Privacy Policy
+        </Link>
       </motion.div>
 
       <div className="absolute inset-0 w-full h-full">
