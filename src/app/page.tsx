@@ -109,7 +109,7 @@ export default function Home() {
         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         className="flex space-x-4 relative z-20"
       >
-        <SocialLink href="mailto:juanszalegria@gmail.com" icon="email" />
+        <SocialLink href="mailto:juanszalegria+apps@gmail.com" icon="email" />
         <SocialLink
           href="https://play.google.com/store/apps/dev?id=6019444648349159980"
           icon="googleplay"
